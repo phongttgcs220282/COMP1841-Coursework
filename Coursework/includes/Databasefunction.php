@@ -34,7 +34,7 @@ function insertQuestion($pdo, $text, $userid, $moduleid, $images){
 }
 
 function allQuestion($pdo){
-    $questions = query($pdo, 'SELECT question.id, question.text, question.date, question.images, question.userid, question.moduleid, user.username, user.email, module.moduleName FROM question INNER JOIN user ON question.userid = user.id INNER JOIN module ON question.moduleid = module.id');
+    $questions = query($pdo, 'SELECT question.id, question.text, question.date, question.images, question.userid, question.moduleid, user.username, user.email, module.moduleName FROM question LEFT JOIN user ON question.userid = user.id LEFT JOIN module ON question.moduleid = module.id');
     return $questions->fetchAll();
 }
 
