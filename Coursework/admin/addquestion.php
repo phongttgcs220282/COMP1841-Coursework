@@ -4,7 +4,7 @@ if(isset($_POST['text'])){
         include '../includes/Databasequestion.php';
         include '../includes/Adminfunction.php';
 
-        insertQuestion($pdo, $_POST['text'], $_POST['userid'], $_POST['moduleid'], $_POST['images']);
+        insertQuestion($pdo, $_POST['text'], $_POST['users'], $_POST['modules'], $_POST['images']);
         header('location: ../admin/questions.php');
     }catch (PDOException $e){
         $title = 'An error has occured';
