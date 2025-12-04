@@ -7,9 +7,7 @@
 
   <label for="email">Email:</label>
   <input type="email" id="email" name="email" value="<?= htmlspecialchars($user['email'] ?? '', ENT_QUOTES, 'UTF-8'); ?>" required>
-  
-  <label for="password">Password: New Password (optional)</label>
-  <input type="password" id="password" name="password" required>
 
   <input type="submit" value="<?= $submitValue ?? 'Save' ?>">
+
 </form>
