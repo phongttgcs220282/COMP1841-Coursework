@@ -5,8 +5,8 @@ include '../includes/Adminfunction.php';
 if (isset($_POST['text'])) {
     $id = $_POST['id'];
     $text = $_POST['text'];
-    $userid = $_POST['userid'];
-    $moduleid = $_POST['moduleid'];
+    $userid = $_POST['users'];
+    $moduleid = $_POST['modules'];
     $images = $_POST['images'];
     if (!empty($_FILES['images']['name'])) {
     $targetDir = '../images/';
