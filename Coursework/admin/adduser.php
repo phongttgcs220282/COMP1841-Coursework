@@ -4,7 +4,7 @@ if(isset($_POST['username'])){
         include '../includes/Databasequestion.php';
         include '../includes/Adminfunction.php';
 
-        insertUser($pdo, $_POST['username'], $_POST['email'], $_POST['password']);
+        insertUser($pdo, $_POST['username'], $_POST['email']);
         header('location: ../admin/users.php');
     }catch (PDOException $e){
         $title = 'An error has occured';
